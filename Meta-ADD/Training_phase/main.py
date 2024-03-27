@@ -18,7 +18,7 @@ def main():
     all_data_frame = LoadDriftData(Data_Vector_Length, DATA_FILE)
     Drift_data_array = all_data_frame.values
     where_are_nan = np.isnan(Drift_data_array)
-    where_are_inf = np.isinf(Drift_data_array)
+    where_are_inf = np.isinf(Drift_data_array) ## check again 
     Drift_data_array[where_are_nan] = 0.0
     Drift_data_array[where_are_inf] = 0.0
     print(True in np.isnan(Drift_data_array))
